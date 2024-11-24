@@ -10,4 +10,4 @@ It includes key processes like data preprocessing, handling missing values, clas
 - **Hyperparameter Tuning**: Optimized models with GridSearchCV.
 - **Evaluation**: Assessed accuracy, confusion matrix, and classification reports.
 
-This project showcases proficiency in machine learning and its practical application in healthcare data analytics.
+This project showcases proficiency in machine learning and its practical application in data analytics.
