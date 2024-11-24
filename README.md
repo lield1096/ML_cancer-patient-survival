@@ -1,6 +1,7 @@
 # ML_cancer-patient-survival
 
 This project predicts cancer patient outcomes (Alive or Dead) using Machine Learning models such as Logistic Regression, Random Forest, and XGBoost. 
+It includes key processes like data preprocessing, handling missing values, class balancing with SMOTE, hyperparameter tuning using GridSearchCV, and evaluation of model performance.
 
 ## Features
 - **Data Preprocessing**: Normalization, handling missing values, and encoding.
