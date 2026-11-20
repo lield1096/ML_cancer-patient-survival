@@ -1,0 +1,67 @@
+{
+  "selected_model": "xgboost",
+  "features": [
+    "age",
+    "tumor_size",
+    "regional_nodes_examined",
+    "regional_nodes_positive"
+  ],
+  "scoring": "roc_auc",
+  "cross_validation": {
+    "logistic_regression": {
+      "cv_roc_auc_mean": 0.6951,
+      "cv_roc_auc_std": 0.0271,
+      "best_params": {
+        "C": 0.01
+      }
+    },
+    "random_forest": {
+      "cv_roc_auc_mean": 0.6889,
+      "cv_roc_auc_std": 0.0344,
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "n_estimators": 200
+      }
+    },
+    "xgboost": {
+      "cv_roc_auc_mean": 0.6979,
+      "cv_roc_auc_std": 0.0337,
+      "best_params": {
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "n_estimators": 100,
+        "subsample": 0.8
+      }
+    }
+  },
+  "test_metrics": {
+    "roc_auc": 0.6933,
+    "pr_auc": 0.3126,
+    "accuracy": 0.7205,
+    "balanced_accuracy": 0.6451,
+    "precision_dead": 0.2821,
+    "recall_dead": 0.5366,
+    "f1_dead": 0.3697,
+    "confusion_matrix": [
+      [
+        514,
+        168
+      ],
+      [
+        57,
+        66
+      ]
+    ],
+    "threshold": 0.5,
+    "n_samples": 805
+  },
+  "metadata": {
+    "package_version": "1.0.0",
+    "sklearn_version": "1.9.1",
+    "python_version": "3.13.18",
+    "trained_at": "2026-11-20T14:12:07+00:00",
+    "random_state": 42,
+    "n_train": 3218
+  }
+}

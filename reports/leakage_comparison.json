@@ -1,0 +1,15 @@
+{
+  "original_smote_before_split": {
+    "accuracy": 0.8819,
+    "roc_auc": 0.9515
+  },
+  "leak_free_with_survival_months": {
+    "accuracy": 0.8857,
+    "roc_auc": 0.8207
+  },
+  "leak_free_final": {
+    "accuracy": 0.8273,
+    "roc_auc": 0.6196
+  },
+  "majority_class_baseline_accuracy": 0.8469
+}

@@ -1,0 +1,32 @@
+# Training configuration. Every run is reproducible from this file + the random seed.
+
+data_path: data/raw/cancer_patient_survival.csv
+model_path: models/model.joblib
+reports_dir: reports
+
+random_state: 42
+test_size: 0.2
+cv_folds: 5
+
+# "Survival Months" is the follow-up time *after* diagnosis. Patients who died have
+# shorter follow-up by definition, so using it as a feature leaks the label and is not
+# available at prediction time. Kept off by default; set to true only for comparison.
+include_survival_months: false
+
+# Metric used for cross-validated model selection and hyperparameter tuning.
+# ROC-AUC is threshold-independent and robust to the ~85/15 class imbalance.
+scoring: roc_auc
+
+# Candidate models and their hyperparameter grids (keys are pipeline step params).
+models:
+  logistic_regression:
+    model__C: [0.01, 0.1, 1.0, 10.0]
+  random_forest:
+    model__n_estimators: [200, 400]
+    model__max_depth: [4, 8, null]
+    model__min_samples_leaf: [1, 5, 10]
+  xgboost:
+    model__n_estimators: [100, 300]
+    model__learning_rate: [0.03, 0.1]
+    model__max_depth: [2, 3, 5]
+    model__subsample: [0.8, 1.0]
